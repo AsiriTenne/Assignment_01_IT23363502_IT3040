@@ -1,82 +1,38 @@
-Singlish to Sinhala Translator - Automated Test Suite
-Project Overview
-This project contains a comprehensive automated testing suite for the SwiftTranslator web application. The application converts Singlish (phonetic Sinhala typed in English characters) into standard Sinhala script in real-time.
+📝 Singlish ➜ Sinhala Translator
+Automated QA Suite
 
-The test suite is built using Playwright and is designed to validate functional accuracy, edge-case handling, and UI responsiveness across multiple browser engines.
+Assignment 01 | IT3040 | IT23363502
 
-Features Tested
-Functional Accuracy: 24 Positive test cases covering simple, compound, and complex sentences, as well as various tenses and polite forms.
+🚀 Project Overview
 
-Robustness (Negative Testing): 12 Negative test cases covering currency, dates, technical English terms, and long paragraph-style inputs.
+This repository contains a professional-grade automated testing framework built using Playwright.
+The target application under test is SwiftTranslator, a real-time Singlish-to-Sinhala translation web application.
 
-UI/UX Functionality: Validation of the Real-time update engine, Clear/Undo button logic, and Swap Language functionality.
+The objective of this project is to rigorously validate the translation engine’s accuracy and UI behavior across 38 distinct test scenarios, ensuring:
 
-Tech Stack
-Framework: Playwright (Node.js)
+Correct linguistic translations
 
-Browsers: Chromium, Firefox, WebKit (Safari)
+Proper handling of edge cases
 
-Language: JavaScript
+Stable and responsive user interface
 
-Reporting: Playwright HTML Reporter
+📊 Understanding the Test Results
 
-Project Structure
-Plaintext
-├── tests/
-│   └── swift_translator.spec.js  # Main test suite (38 test cases)
-├── playwright.config.js          # Cross-browser & timeout configurations
-├── package.json                  # Dependencies and scripts
-└── .gitignore                    # Exclusions for node_modules and reports
-Setup Instructions
-Clone the Repository:
+In Quality Assurance, a failure doesn’t always mean bad news — sometimes it means the tester did their job perfectly 😉
 
-Bash
-git clone https://github.com/AsiriTenne/Assignment_01_IT23363502_IT3040.git
-cd Assignment_01_IT23363502_IT3040
-Install Dependencies:
+✅ PASSED (Green Tick)
 
-Bash
-npm install
-Install Browsers:
+The application is stable
 
-Bash
-npx playwright install
-Running Tests
-Run all tests on all browsers (Chromium, Firefox, WebKit):
-Bash
-npx playwright test
-Run only on Chromium (Headless):
-Bash
-npx playwright test --project=chromium
-Run in Headed mode (To see the browser):
-Bash
-npx playwright test --project=chromium --headed
-View Test Reports
-After running the tests, you can view a detailed HTML report by running:
+The translated output matches the expected Sinhala result
 
-Bash
-npx playwright show-report
-Test Configuration Details
-To ensure stability across different network speeds and browser engines, the following configurations were applied:
+❌ FAILED (Red Cross)
 
-Global Timeout: 60 seconds per test.
+🎯 Bug successfully identified
 
-Action Timeout: 15 seconds for translation polling to account for rendering delays in WebKit/Firefox.
+The translator produced an incorrect or linguistically invalid output
 
-Typing Delay: 100ms between keystrokes to simulate natural user input and trigger real-time updates.
+Confirms that the test script is effective
 
-Known Issues
-Undo/Clear Button: Occasional sync issues observed in specific browser engines where the internal state of the textarea does not reset immediately upon click.+
-
-How to Interpret the Test Results
-In this automation suite, the status indicators should be read as follows:
-
-✅ Green Tick (Passed): The application behaved exactly as expected. The Singlish input was translated into the correct Sinhala script according to the test case requirements.
-
-❌ Red Cross (Failed): This indicates a Functional Discrepancy. The test script worked perfectly, but the "SwiftTranslator" website produced an incorrect translation or failed to clear the text.
-
-Author: Asiri Tenne
-
-Student ID: IT23363502
-
-Module: IT3040 - Assignment 01
+Note:
+In this project, a Red Cross often indicates success from a QA perspective — it proves that the automation suite is capable of detecting translation issues accurately.
