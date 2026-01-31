@@ -18,7 +18,7 @@ Stable and responsive user interface
 
 📊 Understanding the Test Results
 
-In Quality Assurance, a failure doesn’t always mean bad news — sometimes it means the tester did their job perfectly 😉
+In Quality Assurance, a failure doesn’t always mean bad news — sometimes it means the tester did their job perfectly 
 
 ✅ PASSED (Green Tick)
 
